@@ -4,10 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Политика конфиденциальности | PublPost</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="wrap">
+    <div class="langtoggle"><strong>RU</strong> · <a href="en/privacy.html">EN</a></div>
     <a class="backlink" href="index.html">← Правовые документы</a>
     <header>
       <h1>Политика конфиденциальности</h1>
@@ -111,14 +113,15 @@
       <p class="muted">Использование данных соответствует <a href="https://developer.twitter.com/en/developer-terms/agreement-and-policy" target="_blank" rel="noopener noreferrer">X Developer Agreement &amp; Policy</a>. PublPost не извлекает данные за пределами действий самого Пользователя и не агрегирует данные третьих лиц.</p>
 
       <h3>2.3e. Интеграция с Instagram (Meta)</h3>
-      <p>Для работы с Instagram через Meta Graph API подключается Instagram Business / Creator аккаунт, привязанный к Facebook Page. Запрашиваемые scopes: <code>instagram_basic</code>, <code>instagram_content_publish</code>, <code>instagram_manage_comments</code>, <code>instagram_manage_insights</code>, <code>pages_show_list</code>, <code>pages_read_engagement</code>, <code>pages_manage_posts</code>. Использование данных:</p>
+      <p>Для работы с Instagram подключается профессиональный аккаунт Instagram (Business или Creator) через Instagram Login (Business Login) — отдельная Facebook-страница не требуется. Запрашиваемые scopes: <code>instagram_business_basic</code>, <code>instagram_business_content_publish</code>, <code>instagram_business_manage_comments</code>, <code>instagram_business_manage_insights</code>, <code>instagram_business_manage_messages</code>. Использование данных:</p>
       <ul>
-        <li>публикация постов, Reels, Stories;</li>
-        <li>чтение комментариев и ответы на них (модерация);</li>
-        <li>чтение метрик публикации (impressions, reach, engagement, saves);</li>
-        <li>получение списка Facebook Pages для выбора связанного Instagram-аккаунта.</li>
+        <li>чтение базовой информации профиля (id, username, имя, аватар) для отображения подключённого аккаунта;</li>
+        <li>публикация постов, Reels и Stories;</li>
+        <li>чтение комментариев под собственными публикациями и ответы на них (модерация в едином Inbox);</li>
+        <li>чтение сообщений Instagram Direct и ответы на них в едином Inbox, включая ответы живого оператора в течение допустимого окна (human agent);</li>
+        <li>чтение метрик публикаций и аккаунта (impressions, reach, engagement, saves).</li>
       </ul>
-      <p class="muted">Соответствует <a href="https://developers.facebook.com/terms" target="_blank" rel="noopener noreferrer">Meta Platform Terms</a> и <a href="https://developers.facebook.com/devpolicy" target="_blank" rel="noopener noreferrer">Developer Policies</a>.</p>
+      <p class="muted">PublPost работает только с собственным аккаунтом Пользователя, не передаёт данные Instagram третьим сторонам и не использует их для рекламы. Соответствует <a href="https://developers.facebook.com/terms" target="_blank" rel="noopener noreferrer">Meta Platform Terms</a> и <a href="https://developers.facebook.com/devpolicy" target="_blank" rel="noopener noreferrer">Developer Policies</a>.</p>
 
       <h3>2.3f. Интеграция с Threads (Meta)</h3>
       <p>При подключении Threads к PublPost мы получаем OAuth-токен со scopes: <code>threads_basic</code>, <code>threads_content_publish</code>, <code>threads_manage_insights</code>. Использование данных:</p>
@@ -296,14 +299,14 @@
       <h2>12. Контактная информация</h2>
       <p>По всем вопросам, связанным с обработкой персональных данных, вы можете обратиться к Оператору:</p>
       <div class="box">
-        <ul style="list-style:none;padding:0;margin:0">
+        <ul class="nolist">
           <li><span class="muted">Оператор:</span> ИП Попов Иван Петрович, ИНН 521600320843</li>
           <li><span class="muted">Сервис:</span> PublPost</li>
           <li><span class="muted">Сайт:</span> <a href="https://publpost.ru">publpost.ru</a></li>
           <li><span class="muted">Email:</span> <a href="mailto:support@publpost.ru">support@publpost.ru</a></li>
         </ul>
       </div>
-      <p style="margin-top:12px">Срок ответа на запросы: не более 30 дней с момента получения запроса.</p>
+      <p class="mt">Срок ответа на запросы: не более 30 дней с момента получения запроса.</p>
     </section>
 
     <footer>

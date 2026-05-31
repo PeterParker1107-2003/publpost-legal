@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | PublPost</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="langtoggle"><a href="../privacy.html">RU</a> · <strong>EN</strong></div>
+    <a class="backlink" href="../index.html">← Legal documents</a>
+    <header>
+      <h1>Privacy Policy</h1>
+      <p class="muted">Last updated: March 21, 2026</p>
+      <p class="lead">This Privacy Policy (the «Policy») describes how PublPost (publpost.ru) collects, uses, stores, and protects the personal data of users of the service.</p>
+    </header>
+
+    <nav class="toc">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#general">General provisions</a></li>
+        <li><a href="#data-collected">What data we collect</a></li>
+        <li><a href="#purposes">Purposes of data processing</a></li>
+        <li><a href="#legal-basis">Legal basis for processing</a></li>
+        <li><a href="#storage">Data storage</a></li>
+        <li><a href="#third-parties">Sharing with third parties</a></li>
+        <li><a href="#user-rights">User rights</a></li>
+        <li><a href="#cookies">Cookies and analytics</a></li>
+        <li><a href="#security">Data security</a></li>
+        <li><a href="#children">Age restrictions</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contacts">Contact information</a></li>
+      </ol>
+    </nav>
+
+    <section id="general">
+      <h2>1. General provisions</h2>
+      <p>1.1. The data controller is ИП Попов Иван Петрович, ИНН 521600320843 (the «Controller»), which operates the PublPost internet service available at <a href="https://publpost.ru">publpost.ru</a> (the «Service»).</p>
+      <p>1.2. This Policy is based on Russian Federal Law No. 152-FZ of July 27, 2006 «On Personal Data», EU Regulation 2016/679 (GDPR) where applicable to processing of users from EU/EEA countries, and other Russian legal acts on the protection of personal data.</p>
+      <p>1.3. By registering with the Service and/or using its functionality, the User gives unconditional consent to this Policy and the personal data processing terms set out in it. If the User disagrees with the Policy, they must stop using the Service.</p>
+      <p>1.4. PublPost is a social media management platform providing tools for scheduling, creating, automatically publishing content, and analytics.</p>
+    </section>
+
+    <section id="data-collected">
+      <h2>2. What data we collect</h2>
+
+      <h3>2.1. Data provided at registration</h3>
+      <ul>
+        <li>Email address</li>
+        <li>First name and last name (if provided)</li>
+        <li>Password hash — we do not store passwords in plain text, only a cryptographic hash (bcrypt)</li>
+      </ul>
+
+      <h3>2.2. Data received via OAuth authorisation</h3>
+      <p>When you authorise via third-party services (Google, VKontakte, Telegram, Odnoklassniki, Pinterest) we receive only public profile information:</p>
+      <ul>
+        <li>User identifier in the corresponding system</li>
+        <li>First name and last name (public)</li>
+        <li>Email address (if provided)</li>
+        <li>Avatar URL (if available)</li>
+      </ul>
+
+      <h3>2.3. Social network account data</h3>
+      <p>To perform the core function of the Service — publishing content to social networks — we obtain and store:</p>
+      <ul>
+        <li>Access tokens for social network APIs (VK, Telegram, OK, YouTube, Pinterest)</li>
+        <li>Identifiers of connected pages, groups, and channels</li>
+        <li>Account metadata (name, avatar, follower count)</li>
+      </ul>
+      <p class="muted">Tokens are stored in encrypted form and used solely to perform actions requested by the User (publishing posts, retrieving statistics).</p>
+
+      <h3>2.3a. Pinterest integration</h3>
+      <p>When you connect a Pinterest account to PublPost, Pinterest issues us an OAuth access token that grants limited access to your boards and pins. The token is used exclusively for actions you initiate:</p>
+      <ul>
+        <li>creating, scheduling, editing, and deleting pins;</li>
+        <li>reading engagement analytics (impressions, saves, pin clicks, outbound clicks) for pins published through PublPost;</li>
+        <li>reading the list of your boards so the composer can let you choose where to publish.</li>
+      </ul>
+      <p class="muted">PublPost does not share Pinterest data with third parties, does not use it for advertising, and revokes our access immediately when you disconnect the account. Our use of Pinterest data complies with the <a href="https://developers.pinterest.com/terms/api/" target="_blank" rel="noopener noreferrer">Pinterest API Terms of Service</a> and <a href="https://policy.pinterest.com/en/developer-guidelines" target="_blank" rel="noopener noreferrer">Developer Guidelines</a>.</p>
+
+      <h3>2.3b. TikTok integration</h3>
+      <p>When you connect a TikTok account to PublPost, TikTok issues us an OAuth access token with the following scopes: <code>user.info.basic</code>, <code>video.upload</code>, <code>video.publish</code>, <code>video.list</code>. The token and related data are used exclusively for actions you initiate:</p>
+      <ul>
+        <li>uploading and publishing videos to your TikTok account;</li>
+        <li>polling publish status (TikTok processes videos asynchronously — we poll until status transitions to «published»);</li>
+        <li>reading engagement metrics (views, likes, comments, shares) for videos you published through PublPost to display analytics in your dashboard;</li>
+        <li>reading basic profile information (display_name, avatar) to render the connected account in the UI.</li>
+      </ul>
+      <p class="muted">PublPost does not share TikTok data with third parties, does not use it for advertising or retargeting, and does not aggregate data across users. When you disconnect the account, we revoke the access token via TikTok's OAuth revoke endpoint and delete stored tokens and metadata. Our use of TikTok data complies with the <a href="https://developers.tiktok.com/doc/terms-of-service" target="_blank" rel="noopener noreferrer">TikTok API Terms of Service</a> and <a href="https://developers.tiktok.com/doc/tiktok-developer-platform-guidelines" target="_blank" rel="noopener noreferrer">Developer Platform Guidelines</a>.</p>
+      <p class="muted">TikTok API limitations: deleting or editing already-published videos via the API is not supported by TikTok — these actions are only available inside the TikTok app. PublPost does not simulate these actions and does not provide UI for them.</p>
+
+      <h3>2.3c. YouTube (Google API) integration</h3>
+      <p>When you connect a YouTube channel to PublPost, Google issues an OAuth access token with the scopes: <code>youtube.upload</code>, <code>youtube.readonly</code>, <code>youtube.force-ssl</code>. Data usage:</p>
+      <ul>
+        <li>uploading videos and Shorts to your channel;</li>
+        <li>reading channel information (title, subscriber count, list of your own videos) for display in the dashboard;</li>
+        <li>deleting videos that were uploaded through PublPost (requires <code>youtube.force-ssl</code> scope);</li>
+        <li>retrieving published-video metrics (views, likes, comments) for analytics.</li>
+      </ul>
+      <p class="muted">PublPost complies with the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Google API Services User Data Policy</a>, including the Limited Use requirements: Google user data is not transferred to third parties, is not used for personalised advertising, is not used to develop, improve, or train AI/ML models, and is not accessible to humans (except with the user's explicit consent or to resolve technical support issues).</p>
+
+      <h3>2.3d. X (Twitter) integration</h3>
+      <p>When you connect an X account to PublPost, we receive an OAuth 2.0 access token with the scopes: <code>tweet.read</code>, <code>tweet.write</code>, <code>users.read</code>, <code>offline.access</code>. Data usage:</p>
+      <ul>
+        <li>publishing tweets and threads on behalf of the user;</li>
+        <li>reading basic profile information (handle, display name, avatar);</li>
+        <li>deleting tweets published through PublPost;</li>
+        <li>retrieving published-tweet metrics (impressions, likes, retweets, replies) for analytics;</li>
+        <li>refreshing the token via refresh-token (<code>offline.access</code>) without re-prompting OAuth.</li>
+      </ul>
+      <p class="muted">Our use of X data complies with the <a href="https://developer.twitter.com/en/developer-terms/agreement-and-policy" target="_blank" rel="noopener noreferrer">X Developer Agreement &amp; Policy</a>. PublPost does not pull data outside actions initiated by the user and does not aggregate third-party data.</p>
+
+      <h3>2.3e. Instagram (Meta) integration</h3>
+      <p>Instagram integration uses a professional Instagram account (Business or Creator) connected via Instagram Login (Business Login) — a separate Facebook Page is not required. Requested scopes: <code>instagram_business_basic</code>, <code>instagram_business_content_publish</code>, <code>instagram_business_manage_comments</code>, <code>instagram_business_manage_insights</code>, <code>instagram_business_manage_messages</code>. Data usage:</p>
+      <ul>
+        <li>reading basic profile information (id, username, name, avatar) to display the connected account;</li>
+        <li>publishing posts, Reels, and Stories;</li>
+        <li>reading comments on your own posts and replying to them (moderation in the unified Inbox);</li>
+        <li>reading and replying to Instagram Direct messages in the unified Inbox, including human-agent replies within the allowed window;</li>
+        <li>reading post and account metrics (impressions, reach, engagement, saves).</li>
+      </ul>
+      <p class="muted">PublPost operates only on the User's own account, does not share Instagram data with third parties, and does not use it for advertising. Complies with the <a href="https://developers.facebook.com/terms" target="_blank" rel="noopener noreferrer">Meta Platform Terms</a> and <a href="https://developers.facebook.com/devpolicy" target="_blank" rel="noopener noreferrer">Developer Policies</a>.</p>
+
+      <h3>2.3f. Threads (Meta) integration</h3>
+      <p>When you connect Threads to PublPost, we receive an OAuth token with the scopes: <code>threads_basic</code>, <code>threads_content_publish</code>, <code>threads_manage_insights</code>. Data usage:</p>
+      <ul>
+        <li>reading basic profile info (username, avatar);</li>
+        <li>publishing posts and threads;</li>
+        <li>reading published-post metrics (views, likes, replies, reposts).</li>
+      </ul>
+      <p class="muted">The Threads API is a Meta product; data use follows the same Meta Platform Terms and Developer Policies as Instagram/Facebook (see section 2.3e for links).</p>
+
+      <h3>2.3g. Facebook (Meta Pages) integration</h3>
+      <p>When you connect a Facebook Page to PublPost, we obtain a Page Access Token (derived from a User Access Token) with the scopes: <code>pages_show_list</code>, <code>pages_manage_posts</code>, <code>pages_read_engagement</code>, <code>pages_manage_engagement</code>, <code>pages_manage_metadata</code>, <code>pages_read_user_content</code>, <code>read_insights</code>. Data usage:</p>
+      <ul>
+        <li>displaying the list of your Pages so you can pick the target;</li>
+        <li>publishing posts, photos, and videos to the selected Page;</li>
+        <li>reading comments and reactions for moderation;</li>
+        <li>deleting and editing posts published through PublPost;</li>
+        <li>reading Page Insights (impressions, reach, engagement) for analytics.</li>
+      </ul>
+      <p class="muted">Complies with Meta Platform Terms and Developer Policies (links in section 2.3e). PublPost does not request access to Page direct messages and does not publish content without an explicit user action.</p>
+
+      <h3>2.3h. Reddit integration</h3>
+      <p>When you connect Reddit to PublPost, we receive an OAuth token with the scopes: <code>identity</code>, <code>submit</code>, <code>edit</code>, <code>read</code>, <code>history</code>. Data usage:</p>
+      <ul>
+        <li>reading basic account info (username);</li>
+        <li>submitting posts to subreddits you select;</li>
+        <li>editing and deleting posts published through PublPost;</li>
+        <li>reading public subreddit posts for the preview that appears when choosing a target subreddit;</li>
+        <li>reading your own submission history so we can correlate Reddit posts with their entries in PublPost.</li>
+      </ul>
+      <p class="muted">Complies with the <a href="https://www.redditinc.com/policies/data-api-terms" target="_blank" rel="noopener noreferrer">Reddit Data API Terms</a>. PublPost does not use Reddit data to train AI models and does not aggregate third-party content.</p>
+
+      <h3>2.4. User content</h3>
+      <ul>
+        <li>Post text (posts, descriptions)</li>
+        <li>Uploaded images and video files</li>
+        <li>Publication schedules</li>
+        <li>Drafts and templates</li>
+      </ul>
+
+      <h3>2.5. Automatically collected data</h3>
+      <ul>
+        <li>IP address</li>
+        <li>Browser type and version (User-Agent)</li>
+        <li>Operating system</li>
+        <li>Date and time of access to the Service</li>
+        <li>Cookies (see section 8)</li>
+        <li>Analytics data (Yandex.Metrica)</li>
+      </ul>
+
+      <h3>2.6. Payment data</h3>
+      <p>Service payments are processed by a certified payment provider. We <strong>do not store</strong> payment card data (card number, CVV, expiration date). The payment provider processes data in accordance with PCI DSS. We retain only: transaction ID, payment date and amount, subscription status.</p>
+    </section>
+
+    <section id="purposes">
+      <h2>3. Purposes of data processing</h2>
+      <p>We process personal data for the following purposes:</p>
+      <ul>
+        <li><strong>Service provision</strong> — registration and authentication, content publishing to social networks, post scheduling, publication analytics</li>
+        <li><strong>Communication</strong> — sending notifications about publication status, technical updates, terms of service changes</li>
+        <li><strong>Service improvement</strong> — usage analysis to identify bugs, optimise performance, and develop new features</li>
+        <li><strong>Security</strong> — preventing unauthorised access, detecting fraud and abuse</li>
+        <li><strong>Legal obligations</strong> — payment processing, reporting, compliance with applicable law</li>
+        <li><strong>AI content generation</strong> — passing text data (prompts, account context) to AI providers to generate content at the User's request</li>
+      </ul>
+    </section>
+
+    <section id="legal-basis">
+      <h2>4. Legal basis for processing</h2>
+      <p>Personal data processing is carried out on the following legal grounds (Article 6 of FZ-152, Article 6 of GDPR):</p>
+      <ul>
+        <li><strong>Consent of the data subject</strong> (Article 6.1.1 FZ-152, Article 6(1)(a) GDPR) — at registration, newsletter subscription, use of analytics cookies</li>
+        <li><strong>Performance of a contract</strong> (Article 6.1.5 FZ-152, Article 6(1)(b) GDPR) — to provide Service features, process payments, publish content to social networks</li>
+        <li><strong>Legitimate interest of the Controller</strong> (Article 6(1)(f) GDPR) — to ensure Service security, prevent abuse, improve service quality</li>
+        <li><strong>Legal obligation</strong> (Article 6.1.2 FZ-152, Article 6(1)(c) GDPR) — to comply with tax and other legislation</li>
+      </ul>
+    </section>
+
+    <section id="storage">
+      <h2>5. Data storage</h2>
+      <p>5.1. User personal data is stored on servers located within the territory of the Russian Federation, in accordance with Article 18 part 5 of FZ-152.</p>
+      <p>5.2. Personal data retention periods:</p>
+      <table>
+        <thead><tr><th>Data type</th><th>Retention period</th></tr></thead>
+        <tbody>
+          <tr><td>Account data</td><td>Until the User deletes the account</td></tr>
+          <tr><td>Content (posts, media)</td><td>Until deleted by the User or until account deletion</td></tr>
+          <tr><td>Social network access tokens</td><td>Until the social account is disconnected or until account deletion</td></tr>
+          <tr><td>Payment records</td><td>5 years from transaction (RF Tax Code requirement)</td></tr>
+          <tr><td>Logs (IP, User-Agent)</td><td>12 months</td></tr>
+          <tr><td>Analytics data</td><td>26 months (Yandex.Metrica)</td></tr>
+        </tbody>
+      </table>
+      <p>5.3. Data is transmitted over the secure HTTPS protocol (TLS 1.2+). Passwords are stored as cryptographic hashes (bcrypt). Social network access tokens are stored in encrypted form.</p>
+      <p>5.4. After account deletion, personal data is erased within 30 days, except for data retained as required by law.</p>
+    </section>
+
+    <section id="third-parties">
+      <h2>6. Sharing with third parties</h2>
+      <p>6.1. We <strong>do not sell</strong> User personal data to third parties. Data is shared only in the cases described below, and only to the extent necessary for the stated purposes.</p>
+      <h3>6.2. Social networks</h3>
+      <p>To publish content, we share data via official social network APIs: VKontakte, Telegram, Odnoklassniki, YouTube. Data shared: post text, media files, publication parameters. Processing of data by social networks is governed by their own privacy policies.</p>
+      <h3>6.3. Payment providers</h3>
+      <p>For payment processing, data is shared with a PCI DSS certified payment provider. We share: User email, payment amount and description.</p>
+      <h3>6.4. Analytics</h3>
+      <p>We use Yandex.Metrica to analyse use of the Service. Yandex.Metrica automatically collects de-identified visit data. Yandex.Metrica's processing of data is governed by <a href="https://yandex.ru/legal/confidential/" target="_blank" rel="noopener noreferrer">Yandex's Privacy Policy</a>.</p>
+      <h3>6.5. AI providers</h3>
+      <p>To generate content at the User's request, we share text data (prompts, brand context) with OpenAI. Data is used solely to generate the response and is not retained by the provider for model training (when accessed via API). Media files and personal User data are not shared with AI providers.</p>
+      <h3>6.6. Other cases</h3>
+      <p>We may disclose personal data upon request by authorised state bodies in cases provided for by Russian Federation law.</p>
+    </section>
+
+    <section id="user-rights">
+      <h2>7. User rights</h2>
+      <p>Pursuant to Article 14 of FZ-152 and Chapter III of the GDPR, you have the following rights:</p>
+      <ul>
+        <li><strong>Right of access</strong> — you may request information about which of your personal data we process, for what purposes, and to whom it has been disclosed</li>
+        <li><strong>Right of rectification</strong> — you may update or correct your personal data in your profile settings or by contacting us via email</li>
+        <li><strong>Right to erasure</strong> — you may delete your account and all associated data in the Service settings. After deletion, the data will be permanently erased within 30 days</li>
+        <li><strong>Right to withdraw consent</strong> — you may withdraw consent for personal data processing at any time by sending a request to <a href="mailto:support@publpost.ru">support@publpost.ru</a>. Withdrawal of consent does not affect the lawfulness of processing based on consent before its withdrawal</li>
+        <li><strong>Right to data portability</strong> — you may request a copy of your data in a machine-readable format</li>
+        <li><strong>Right to restriction of processing</strong> — you may demand restriction of processing of your data in cases provided for in Article 18 GDPR</li>
+        <li><strong>Right to lodge a complaint</strong> — you may lodge a complaint with Roskomnadzor (Federal Service for Supervision of Communications, Information Technology and Mass Media): <a href="https://rkn.gov.ru" target="_blank" rel="noopener noreferrer">rkn.gov.ru</a></li>
+      </ul>
+      <p>To exercise any of these rights, send a request to <a href="mailto:support@publpost.ru">support@publpost.ru</a>. We will respond within 30 days.</p>
+    </section>
+
+    <section id="cookies">
+      <h2>8. Cookies and analytics</h2>
+      <p>8.1. The Service uses cookies — small text files saved in the User's browser.</p>
+      <p>8.2. Types of cookies used:</p>
+      <table>
+        <thead><tr><th>Type</th><th>Purpose</th><th>Lifetime</th></tr></thead>
+        <tbody>
+          <tr><td>Necessary</td><td>Authentication, session, CSRF protection</td><td>Until session ends</td></tr>
+          <tr><td>Functional</td><td>Interface settings, user preferences</td><td>1 year</td></tr>
+          <tr><td>Analytics</td><td>Yandex.Metrica — visit statistics</td><td>1 year</td></tr>
+        </tbody>
+      </table>
+      <p>8.3. You can disable cookies in your browser settings. Note that disabling necessary cookies will prevent the Service from being used (no authentication).</p>
+      <p>8.4. To disable analytics cookies for Yandex.Metrica, you can use the <a href="https://yandex.ru/support/metrica/general/opt-out.html" target="_blank" rel="noopener noreferrer">Yandex.Metrica blocking extension</a>.</p>
+    </section>
+
+    <section id="security">
+      <h2>9. Data security</h2>
+      <p>9.1. We take all necessary organisational and technical measures to protect personal data from unauthorised access, destruction, modification, blocking, copying, distribution, or other unlawful actions by third parties.</p>
+      <p>9.2. Security measures applied:</p>
+      <ul>
+        <li>Data transmission over the secure HTTPS protocol (TLS 1.2+)</li>
+        <li>Password hashing using bcrypt (with individual salts)</li>
+        <li>Encryption of social network access tokens</li>
+        <li>Access control within the Service</li>
+        <li>Regular data backups</li>
+        <li>Suspicious activity monitoring</li>
+        <li>CSRF, XSS, and SQL injection protection at the application level</li>
+      </ul>
+      <p>9.3. Despite the measures taken, we cannot guarantee absolute security of data transmitted over the internet. In the event of a data breach, we will notify affected Users and the relevant authorities within the timelines established by law.</p>
+    </section>
+
+    <section id="children">
+      <h2>10. Age restrictions</h2>
+      <p>10.1. The Service is not intended for persons under 16 years old. We knowingly do not collect personal data of minors.</p>
+      <p>10.2. If we become aware that we have received personal data of a person under 16 years old without parental or legal guardian consent, we will take steps to delete such data as soon as possible.</p>
+      <p>10.3. If you are a parent or legal guardian and believe that your child has provided us with personal data, please contact us at <a href="mailto:support@publpost.ru">support@publpost.ru</a>.</p>
+    </section>
+
+    <section id="changes">
+      <h2>11. Changes to this policy</h2>
+      <p>11.1. We reserve the right to make changes to this Policy. The current version is always available at <a href="https://publpost.ru/privacy">publpost.ru/privacy</a>.</p>
+      <p>11.2. In the event of material changes, we will notify Users by email at least 14 days before the changes take effect.</p>
+      <p>11.3. Continued use of the Service after the changes take effect constitutes the User's acceptance of the updated Policy.</p>
+    </section>
+
+    <section id="contacts">
+      <h2>12. Contact information</h2>
+      <p>For all questions related to personal data processing, you can contact the Controller:</p>
+      <div class="box">
+        <ul class="nolist">
+          <li><span class="muted">Controller:</span> ИП Попов Иван Петрович, ИНН 521600320843</li>
+          <li><span class="muted">Service:</span> PublPost</li>
+          <li><span class="muted">Website:</span> <a href="https://publpost.ru">publpost.ru</a></li>
+          <li><span class="muted">Email:</span> <a href="mailto:support@publpost.ru">support@publpost.ru</a></li>
+        </ul>
+      </div>
+      <p class="mt">Response time: within 30 days of receiving the request.</p>
+    </section>
+
+    <footer>
+      <p>Publication date: March 21, 2026</p>
+      <p>ИП Попов Иван Петрович, ИНН 521600320843 | PublPost | <a href="https://publpost.ru">publpost.ru</a></p>
+    </footer>
+  </div>
+</body>
+</html>

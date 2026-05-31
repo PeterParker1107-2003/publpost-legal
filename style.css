@@ -7,7 +7,6 @@
   --bg-box: #f8f7fb;
 }
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   background: #ffffff;
@@ -45,4 +44,10 @@ th { font-weight: 600; }
 .box { border: 1px solid var(--border); background: var(--bg-box); border-radius: 10px; padding: 16px 18px; }
 footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; }
 .backlink { display: inline-block; margin-bottom: 24px; font-size: 14px; }
+.langtoggle { text-align: right; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+.langtoggle a { color: var(--accent); }
+.langtoggle strong { color: var(--text); font-weight: 600; }
+.nolist { list-style: none; padding: 0; margin: 0; }
+table.kv td:first-child { font-weight: 600; width: 200px; }
+.mt { margin-top: 14px; }
 @media print { body { font-size: 12px; } .toc { background: #fff; } }
